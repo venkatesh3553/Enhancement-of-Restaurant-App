@@ -2,11 +2,9 @@ import {Component} from 'react'
 
 import {Redirect} from 'react-router-dom'
 import Cookies from 'js-cookie'
-//  import Loader from 'react-loader-spinner'
 import Header from '../Header'
 import Tabs from '../Tabs'
 import CategoryItems from '../CategoryItems'
-//  import CartContext from '../../Context/CartContext'
 
 import './index.css'
 
@@ -33,7 +31,7 @@ class Home extends Component {
       apiStatus: apiStatusConstant.inProgress,
     })
     const apiUrl =
-      'https://run.mocky.io/v3/77a7e71b-804a-4fbd-822c-3e365d3482cc'
+      'https://apis2.ccbp.in/restaurant-app/restaurant-menu-list-details'
 
     const token = Cookies.get('jwt_token')
     const options = {
@@ -45,7 +43,7 @@ class Home extends Component {
 
     const response = await fetch(apiUrl, options)
     const data = await response.json()
-    console.log('response =', data)
+
     const tableMenuList = data[0].table_menu_list
 
     const categoryDishesFunction = each => ({
@@ -88,7 +86,6 @@ class Home extends Component {
         tableMenuList: newTableMenuList,
         tableName: data[0].table_name,
       }
-      console.log('new data', newData)
 
       this.setState({
         restrauntData: newData,

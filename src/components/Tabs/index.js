@@ -2,7 +2,6 @@ import './index.css'
 
 const Tabs = props => {
   const {eachMenu, isActive, updateTabId} = props
-  console.log('is active from', isActive)
 
   const styleCsName = isActive ? 'activeClsName' : ''
 

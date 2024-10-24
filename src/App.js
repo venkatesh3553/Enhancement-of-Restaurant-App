@@ -15,13 +15,10 @@ class App extends Component {
   addCartItem = (item, id, mId) => {
     const {cartList} = this.state
     const isExist = cartList.filter(each => each.dishId === id)
-    console.log('is exist list=', isExist)
-    console.log('dish id=', id)
 
     if (isExist.length !== 0) {
       const dish = isExist.pop()
       const index = cartList.findIndex(each => each.dishId === id)
-      console.log('index=', index)
 
       const {dishQuantity} = dish
       const updatedQuantity = dishQuantity + 1
@@ -54,7 +51,7 @@ class App extends Component {
     const {cartList} = this.state
     const dish = cartList.filter(each => each.dishId === id)
     const dt = dish[0].dishQuantity
-    console.log('dish and its quantity=', dish, dt)
+
     if (dt === 1) {
       const index = cartList.findIndex(each => each.dishId === id)
       cartList.splice(index, 1)
@@ -96,7 +93,7 @@ class App extends Component {
 
   render() {
     const {cartList, title} = this.state
-    console.log('cart list=', cartList)
+
     return (
       <>
         <CartContext.Provider

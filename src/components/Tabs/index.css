@@ -10,7 +10,8 @@
   outline: none;
 }
 .activeClsName {
-  border-bottom: 4px solid deeppink;
+  border-bottom: 4px solid rgb(100, 242, 143);
+  font-size: 20px;
 }
 .activeColor {
   color: deeppink;

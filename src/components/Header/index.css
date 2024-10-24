@@ -45,13 +45,14 @@
 
 .logout {
   color: white;
-  background-color: blue;
+  background-color: rgb(52, 201, 235);
   border: none;
   border-radius: 15px;
   font-size: 15px;
   padding: 10px;
   cursor: pointer;
   outline: none;
+  font-family: Roboto;
 }
 .heading-link {
   text-decoration: none;
